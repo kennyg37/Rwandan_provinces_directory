@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="location-form">
+        <form>
+            <label for="Province">Province:</label>
+            <select id="province" name="Province" required class="form-item">
+                <option value="province">--- select a province ---</option>
+            </select>
+            <br>
+            <label for="District">District:</label>
+            <select id="district" class="form-item" name="District">
+                <option value="district">--- select a district ---</option>
+            </select>
+            <br>
+            <label for="Sector">Sector:</label>
+            <select id="sector" class="form-item" name="Sector">
+                <option value="sector">--- select a sector ---</option>
+            </select>
+            <br>
+            <label for="Cell">Cell:</label>
+            <select id="cell" name="Cell"><option value="cell">--- select a cell ---</option></select>
+            <br>
+            <label for="Village">Village:</label>
+            <select id="village" name="Village"><option value="village">--- select a village ---</option></select>
+            <br>
+            <input type="submit" value="Submit">
+          </form>          
+    </div>
+<script src="options.js"></script>
+</body>
+</html>
