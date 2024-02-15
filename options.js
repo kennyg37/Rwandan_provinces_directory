@@ -24,42 +24,40 @@ fetch('data.json')
     provinceDropdown.addEventListener('change', function() {
         const selectedProvince = provinceDropdown.value;
         const districts = jsonData[selectedProvince];
-        districtDropdown.innerHTML = ''; 
         for (const district in districts) {
             const option = document.createElement('option');
             option.text = district;
             option.value = district;
             districtDropdown.append(option);
         }
+        console.log(districts);
         });
     districtDropdown.addEventListener('change', function() {
         const selectedDistrict = districtDropdown.value;
         const sectors = jsonData[provinceDropdown.value][selectedDistrict];
-        sectorDropdown.innerHTML = '';
         for (const sector in sectors) {
             const option = document.createElement('option');
             option.text = sector;
             option.value = sector;
             sectorDropdown.append(option);
         }
-    
+    console.log(sectors);
      
     });
     sectorDropdown.addEventListener('change', function() {
         const selectedSector = sectorDropdown.value;
         const cells = jsonData[provinceDropdown.value][districtDropdown.value][selectedSector];
-        cellDropdown.innerHTML = '';
         for (const cell in cells) {
             const option = document.createElement('option');
             option.text = cell;
             option.value = cell;
             cellDropdown.append(option);
         }
+        console.log(cells);
     });
     cellDropdown.addEventListener('change', function() {
         const selectedCell = cellDropdown.value;
         const villages = jsonData[provinceDropdown.value][districtDropdown.value][sectorDropdown.value][selectedCell];
-        villageDropdown.innerHTML = '';
         Object.keys(villages).forEach(villageKey => {
             const option = document.createElement('option');
             option.text = villages[villageKey];
